@@ -1,0 +1,23 @@
+<div class="sign-wrapper">
+    <p>Create A New Account!</p>
+    <div class="sign-form-wrapper">
+        <form autocomplete="off" [formGroup]="profileForm" (ngSubmit)="formValidate()">
+            <label>Username</label>
+                <input type="text" class="input" placeholder="Username" formControlName="Username">
+            <label>Email</label>
+                <input type="text" class="input" placeholder="Email" formControlName="Email" required>
+            <label>Password</label>
+                <input type="text" class="input" placeholder="Password" formControlName="Password" required>
+            <label>Confirm Password</label>
+                <input type="text" class="input" placeholder="Confirm Password" formControlName="ConfirmPassword" required>    
+            <div class="sign-button-wrapper">
+                <button class="btn btn-primary" type="submit" >Sign-Up</button>
+                <button class="btn btn-primary" routerLink="/login">Sign-In</button>
+            </div>            
+        </form>
+
+    </div>
+</div>
+<div class="sign-validation" #signValidation>
+
+</div>
